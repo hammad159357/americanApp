@@ -1,7 +1,8 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 // import logo from '../../assets/footerlogo.png'
-import { FaFacebook, FaInstagram, FaEnvelope, } from 'react-icons/fa';
+import logo from '../../assets/Logo-footer.png'
+import { FaEnvelope, FaPhone, FaLocationArrow } from 'react-icons/fa';
 import { Row, Col, Container } from 'react-bootstrap';
 import './footer.css'
 
@@ -14,49 +15,48 @@ const Footer = () => {
                     <Col sm={6} md={3}>
                         <div className='column col1'>
                             <div className='theme_logo'>
-                                <img src={''} />
+                                <img src={logo} />
                             </div>
-                            <p>For further queries: </p>
+                            {/* <p>For further queries: </p> */}
 
-                            <ul className='contact_list'>
-                                <li><a href='mailto:bluuhealthcare@gmail.com'><FaEnvelope /> bluuhealthcare@gmail.com</a></li>
-                                {/* <li><a href='tel:480-275-3106'><FaPhoneAlt /> 480-275-3106</a></li>
+                            {/* <ul className='contact_list'> */}
+                            {/* <li><a href='mailto:bluuhealthcare@gmail.com'><FaEnvelope /> bluuhealthcare@gmail.com</a></li> */}
+                            {/* <li><a href='tel:480-275-3106'><FaPhoneAlt /> 480-275-3106</a></li>
                <li><FaMapMarkerAlt /> 617 East Avenue Tempe, AZ 85282</li>*/}
+                            {/* </ul> */}
+                        </div>
+                    </Col>
+                    <Col sm={6} md={3}>
+                        <div className='column links padding-left'>
+                            <h3>QUICK LINKS</h3>
+
+                            <ul>
+                                <li><a href='#'>Home</a></li>
+                                <li><a href='#'>About Us</a></li>
+                                <li><a href='#'>Services</a></li>
+                                <li><a href='#'>Our Works</a></li>
+                                <li><a href='#'>Contact Us</a></li>
                             </ul>
                         </div>
                     </Col>
                     <Col sm={6} md={3}>
                         <div className='column links padding-left'>
-                            <h3>Quick Links</h3>
-
+                            <h3>USEFUL LINKS</h3>
                             <ul>
-                                <li><a to='/faq'>FAQs</a></li>
-                                <li><a to='/careers'>Careers</a></li>
-                                <li><a to='/subscription'>Join BluuHealth</a></li>
+                                <li style={{ color: 'white' }}>FAQ's</li>
+                                <li style={{ color: 'white' }}>Privacy Policy</li>
+                                <li style={{ color: 'white' }}>Terms of Condition</li>
                             </ul>
                         </div>
                     </Col>
                     <Col sm={6} md={3}>
                         <div className='column links padding-left'>
-                            <h3>Our Services</h3>
-
+                            <h3 style={{ color: "#fff" }}>CONTACT US</h3>
                             <ul>
-                                <li style={{ color: 'white' }}>Individual</li>
-                                <li style={{ color: 'white' }}>Couples</li>
-                                <li style={{ color: 'white' }}>Family</li>
-                                <li style={{ color: 'white' }}>Adolescence</li>
+                                <li><a href='example@gmail.com'><FaPhone /> 123 456 789</a></li>
+                                <li><a href='example@gmail.com'><FaEnvelope /> example@gmail.com</a></li>
+                                <li><a href='example@gmail.com'><FaLocationArrow /> Street 5</a></li>
                             </ul>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={3}>
-                        <div className='column contact padding-left'>
-                            <h3 style={{ color: "#fff" }}>For Latest Updates</h3>
-                            <div className='contact_no'>
-                                <div className='number_block'>
-                                    <FaFacebook />
-                                    <FaInstagram />
-                                </div>
-                            </div>
 
                         </div>
                     </Col>
@@ -66,10 +66,10 @@ const Footer = () => {
                     <Col md={12}>
                         <div className='footer__bottom_bar'>
                             <ul>
-                                <li><a href='#'>Privacy Policy</a></li>
-                                <li><a href='#'>Terms & Conditions</a></li>
+                                {/* <li><a href='#'>Privacy Policy</a></li>
+                                <li><a href='#'>Terms & Conditions</a></li> */}
                             </ul>
-                            <h3>Bluu Health © 2023</h3>
+                            {/* <h3>Bluu Health © 2023</h3> */}
                         </div>
                     </Col>
                 </Row>

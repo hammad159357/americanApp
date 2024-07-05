@@ -1,0 +1,64 @@
+.industry-section {
+    padding: 50px;
+    text-align: left;
+    background: url('../../assets/proposalbackground.png');
+    color: #fff;
+}
+
+.industry-content {
+    text-align: left;
+    position: relative;
+    /* margin-left: 30px; */
+    line-height: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.industry-content ul {
+    list-style-type: none;
+    /* padding-left: 0; */
+    margin-top: 20px;
+}
+
+.industry-content ul li {
+    /* color: #2E3E5C; */
+    font-size: 16px;
+    font-family: Montserrat;
+}
+
+.industry-content h1 {
+    /* font-size: 2.5em; */
+    margin-bottom: 20px;
+}
+
+.industry-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.industry-image {
+    text-align: left;
+    padding: 15px 35px;
+}
+
+.industry-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .industry-content h1 {
+        font-size: 2em;
+    }
+
+    .industry-content p {
+        font-size: 1em;
+    }
+
+    .industry-section {
+        padding: 30px;
+    }
+}

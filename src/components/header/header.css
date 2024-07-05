@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-list ul {
+    display: flex;
+    gap: 60px;
+    list-style-type: none;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin: unset;
+}

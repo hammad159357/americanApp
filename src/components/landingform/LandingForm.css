@@ -1,0 +1,45 @@
+.two-column-section {
+    padding: 50px;
+    background: url('../../assets/proposalbackground.png');
+}
+
+.left-column {
+    text-align: left;
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+
+.left-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.left-column p {
+    margin-bottom: 20px;
+}
+
+.right-column {
+    text-align: center;
+}
+
+.right-column img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+.budget-select .ant-select-selector {
+    border-radius: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .two-column-section {
+        padding: 30px 10px;
+    }
+
+    .left-column {
+        margin-bottom: 20px;
+    }
+}
