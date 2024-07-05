@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Carousel } from 'antd'
 import logo from '../../assets/Header-logo.png'
+import { motion } from 'framer-motion'
 import './clientReview.css'
 const ClientReview = () => {
     const contentStyle = {
@@ -25,11 +26,21 @@ const ClientReview = () => {
 
     return (
         <>
-            <div className='client-section'>
+            <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                viewport={{ once: true }}
+                className='client-section'>
                 <h1>WHAT CLIENTS ARE SAYING</h1>
                 <h1>ABOUT APPMAKERS</h1>
-            </div>
-            <div style={{ marginTop: "-65px" }}>
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                viewport={{ once: true }}
+                style={{ marginTop: "-65px" }}>
                 <Carousel arrows dots={false}
                     style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
                     afterChange={onChange}
@@ -65,7 +76,7 @@ const ClientReview = () => {
                         </div>
                     </div>
                 </Carousel>
-            </div>
+            </motion.div>
         </>
     )
 }

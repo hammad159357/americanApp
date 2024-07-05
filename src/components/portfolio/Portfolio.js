@@ -9,6 +9,8 @@ import portfolio6 from '../../assets/portfolio6.jpg'
 import portfolio7 from '../../assets/portfolio7.jpg'
 import portfolio8 from '../../assets/portfolio8.jpg'
 import './portfolio.css'
+import { motion } from 'framer-motion'
+
 import PortfolioImgSection from './overview/PortfolioImgSection'
 
 const Portfolio = () => {
@@ -48,10 +50,20 @@ const Portfolio = () => {
     return (
         <>
             <div className='portfolio-section'>
-                <h1>OUR PORTFOLIO</h1>
-                <div >
+                <motion.h1
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                >OUR PORTFOLIO</motion.h1>
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                >
                     <Tabs de tabBarGutter={48} centered defaultActiveKey="FASIONAPP" items={items} onChange={onChange} />
-                </div>
+                </motion.div>
             </div>
         </>
     )

@@ -15,10 +15,10 @@ import Banner from './components/banner/Banner';
 function App() {
   return (
     <>
+      <Header />
       <Banner />
-      <About />
 
-      {/* <Header />
+
       <About />
       <Service />
       <Technology />
@@ -28,7 +28,7 @@ function App() {
       <Portfolio />
       <LandingForm />
       <Testimonial />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

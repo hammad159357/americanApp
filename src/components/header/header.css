@@ -7,11 +7,12 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 }
 
 .header-list ul {
     display: flex;
-    gap: 60px;
+    gap: 30px;
     list-style-type: none;
     /* justify-content: space-around; */
     align-items: center;

@@ -1,3 +1,61 @@
-.header {
+/* banner.css */
+/* .banner {
+    position: relative;
+    overflow: hidden;
+
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner h1 {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */
+
+/* banner.css */
+.banner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.marquee {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee h1 {
+    display: inline-block;
+    padding-left: 100%;
+    color: #fff;
+    /* Ensures content starts outside the visible area */
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }

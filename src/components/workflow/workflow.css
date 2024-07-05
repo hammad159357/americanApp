@@ -8,3 +8,12 @@
     padding: 0 50px;
     text-align: center;
 }
+
+.workflow-section .ant-steps .ant-steps-item-finish .ant-steps-item-icon>.ant-steps-icon .ant-steps-icon-dot,
+.ant-steps .ant-steps-item-process .ant-steps-item-icon>.ant-steps-icon .ant-steps-icon-dot {
+    background: #e13838;
+}
+
+.workflow-section .ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+    background: #e13838;
+}

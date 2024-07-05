@@ -1,52 +1,81 @@
 import React from 'react'
-import portfolio1 from '../../assets/idea-icon.jpg'
+import logo1 from '../../assets/logo1.png'
+import logo2 from '../../assets/logo2.png'
+import logo3 from '../../assets/logo3.png'
+import logo4 from '../../assets/logo4.png'
+import logo5 from '../../assets/logo5.png'
 import { Row, Col, Steps } from 'antd'
+import { motion } from 'framer-motion'
 
 import './workflow.css'
 
 const Workflow = () => {
     const data = [
-        { title: "IDEA", img: portfolio1 },
-        { title: "PROTOTYPE", img: portfolio1 },
-        { title: "DESIGN & DEVELOPMENT", img: portfolio1 },
-        { title: "SOFTWARE LAUNCH", img: portfolio1 },
-        { title: "PROMOTION", img: portfolio1 },
+        { title: "IDEA", img: logo2 },
+        { title: "PROTOTYPE", img: logo4 },
+        { title: "DESIGN & DEVELOPMENT", img: logo1 },
+        { title: "SOFTWARE LAUNCH", img: logo3 },
+        { title: "PROMOTION", img: logo5 },
     ]
     return (
         <>
             <div className='workflow-section'>
-                <h1>WORKFLOW</h1>
-                <Row gutter={[16, 20]} justify='center' style={{ gap: "20px", padding: '0px 300px' }}>
+                <motion.h1
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                >WORKFLOW</motion.h1>
+                <Row gutter={[16, 20]} justify='center' style={{ gap: "20px", padding: '0px 250px' }}>
                     {data.map(el =>
                         <Col style={{ maxWidth: "112px" }}>
-                            <div style={{ background: "black", padding: "8px", borderRadius: "4px" }}>
+                            <motion.div
+                                viewport={{ once: true }}
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                                style={{ background: "black", padding: "8px", borderRadius: "4px" }}>
                                 <img height='80px' src={el?.img} alt='portfolio1' />
-                            </div>
-                            <p>{el?.title}</p>
+                            </motion.div>
+                            <motion.p
+                                viewport={{ once: true }}
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                            >{el?.title}</motion.p>
                         </Col>
                     )}
-                    <Steps
-                        style={{ display: "flex", justifyContent: "center" }}
-                        progressDot
-                        current={4}
-                        items={[
-                            {
-                                title: '01',
-                            },
-                            {
-                                title: '02',
-                            },
-                            {
-                                title: '03',
-                            },
-                            {
-                                title: '04',
-                            },
-                            {
-                                title: '05',
-                            },
-                        ]}
-                    />
+                    <motion.div
+                        viewport={{ once: true }}
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                    >
+
+                        <Steps
+                            style={{ display: "flex", justifyContent: "center" }}
+                            progressDot
+                            current={4}
+                            items={[
+                                {
+                                    title: '01',
+                                },
+                                {
+                                    title: '02',
+                                },
+                                {
+                                    title: '03',
+                                },
+                                {
+                                    title: '04',
+                                },
+                                {
+                                    title: '05',
+                                },
+                            ]}
+                        />
+                    </motion.div>
+
                 </Row>
             </div>
         </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Carousel } from 'antd'
 import logo from '../../assets/Header-logo.png'
+import { motion } from 'framer-motion'
 import './technology.css'
 const Technology = () => {
     const contentStyle = {
@@ -25,9 +26,21 @@ const Technology = () => {
     return (
         <>
             <div className='technology-section'>
-                <h1>TECHNOLOGIES WE</h1>
-                <h1>WORK WITH</h1>
-                <div style={{ marginTop: "20px" }}>
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: -100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                >
+                    <h1>TECHNOLOGIES WE</h1>
+                    <h1>WORK WITH</h1>
+                </motion.div>
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                    style={{ marginTop: "20px" }}>
                     <Carousel autoplay
                         style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
                         afterChange={onChange}
@@ -63,7 +76,7 @@ const Technology = () => {
                             </div>
                         </div>
                     </Carousel>
-                </div>
+                </motion.div>
             </div>
 
         </>
