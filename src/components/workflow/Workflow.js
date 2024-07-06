@@ -42,6 +42,7 @@ const Workflow = () => {
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                                style={{ fontWeight: 700 }}
                             >{el?.title}</motion.p>
                         </Col>
                     )}

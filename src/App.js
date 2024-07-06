@@ -17,8 +17,6 @@ function App() {
     <>
       <Header />
       <Banner />
-
-
       <About />
       <Service />
       <Technology />
