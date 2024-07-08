@@ -50,20 +50,22 @@ const Portfolio = () => {
     return (
         <>
             <div className='portfolio-section'>
-                <motion.h1
-                    viewport={{ once: true }}
-                    initial={{ opacity: 0, x: -40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
-                >OUR PORTFOLIO</motion.h1>
-                <motion.div
-                    viewport={{ once: true }}
-                    initial={{ opacity: 0, x: 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", stiffness: 100, damping: 30 }}
-                >
-                    <Tabs de tabBarGutter={48} centered defaultActiveKey="FASIONAPP" items={items} onChange={onChange} />
-                </motion.div>
+                <div className='portfolio-container'>
+                    <motion.h1
+                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                    >OUR PORTFOLIO</motion.h1>
+                    <motion.div
+                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ type: "spring", stiffness: 100, damping: 30 }}
+                    >
+                        <Tabs de tabBarGutter={48} centered defaultActiveKey="FASIONAPP" items={items} onChange={onChange} />
+                    </motion.div>
+                </div>
             </div>
         </>
     )

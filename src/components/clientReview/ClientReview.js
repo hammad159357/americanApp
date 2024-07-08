@@ -1,7 +1,15 @@
-import React from 'react'
-import { Card, Carousel } from 'antd'
+import React, { useRef } from 'react'
+import { Card, Carousel, Button } from 'antd'
+import svg1 from '../../assets/svg1.svg'
+import svg2 from '../../assets/svg2.svg'
+import svg3 from '../../assets/svg3.svg'
+import svg4 from '../../assets/svg4.svg'
+import svg5 from '../../assets/svg5.svg'
 import logo from '../../assets/Header-logo.png'
+
 import { motion } from 'framer-motion'
+import LeftArrowIcon from '../../assets/icons/LeftArrow'
+import RightArrowIcon from '../../assets/icons/RightArrow'
 import './clientReview.css'
 const ClientReview = () => {
     const contentStyle = {
@@ -22,7 +30,8 @@ const ClientReview = () => {
     const onChange = (currentSlide) => {
         console.log(currentSlide);
     };
-    const data = [logo, logo, logo, logo, logo]
+    const data = [svg1, svg2, svg3, svg4, svg5]
+    const slider = useRef(null)
 
     return (
         <>
@@ -34,25 +43,38 @@ const ClientReview = () => {
                 className='client-section'>
                 <h1>WHAT CLIENTS ARE SAYING</h1>
                 <h1>ABOUT APPMAKERS</h1>
+                <div className='client-underline'></div>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 100, damping: 30 }}
                 viewport={{ once: true }}
-                style={{ marginTop: "-65px" }}>
-                <Carousel arrows dots={false}
+                style={{ marginTop: "-60px" }}>
+                <Carousel arrows dots={false} ref={slider}
+                    nextArrow={<>
+                        <Button shape="circle"
+                            icon={<RightArrowIcon />}
+                            className='client-rightarrow'
+                            onClick={() => slider.current.next()} /></>}
+
+                    prevArrow={<>
+                        <Button shape="circle"
+                            icon={<LeftArrowIcon />}
+                            className='client-leftarrow'
+
+                            onClick={() => slider.current.prev()} /></>}
                     style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
                     afterChange={onChange}
                 >
                     <div>
-                        <div style={{ display: "flex", background: 'rgb(194 65 26)', borderRadius: "8px" }}>
+                        <div style={{ display: "flex", background: 'linear-gradient(0deg, #b93126 0%, #e3582c 100%)', borderRadius: "8px" }}>
                             {data?.map((el, i) => {
                                 return (
                                     <>
                                         <div key={i} style={contentStyle}>
                                             <div style={logoStyle}>
-                                                <img height='70px' src={el} />
+                                                <img width='70px' height='70px' src={el} />
                                             </div>
                                         </div>
                                     </>
@@ -67,7 +89,7 @@ const ClientReview = () => {
                                     <>
                                         <div key={i} style={contentStyle}>
                                             <div style={logoStyle}>
-                                                <img height='70px' src={el} />
+                                                <img width='70px' height='70px' src={el} />
                                             </div>
                                         </div>
                                     </>

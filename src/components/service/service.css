@@ -4,3 +4,39 @@
     background: black;
     color: #fff;
 }
+
+.service-first-container {
+    font-size: 50px;
+    letter-spacing: 12px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-button {
+    color: rgb(255, 255, 255);
+    /* padding: 0px 20px; */
+    /* border-radius: 20px; */
+    border-color: rgb(48, 147, 158);
+    /* background: rgb(48, 147, 158); */
+    font-size: 17px;
+    margin-top: 20px;
+    width: 170px;
+    height: 40px;
+    border-radius: 27px;
+    background-image: linear-gradient(0deg, #234b54 0%, #369694 100%);
+}
+
+.service-paragraph {
+
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Poppins";
+}

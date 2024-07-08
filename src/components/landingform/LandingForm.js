@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import './LandingForm.css';
 
 const LandingForm = () => {
+    const { TextArea } = Input
     return (
         <>
             <div className="two-column-section">
@@ -17,7 +18,7 @@ const LandingForm = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ type: "spring", stiffness: 100, damping: 30 }}
                             className="left-column">
-                            <h1 style={{ color: "#fff", letterSpacing: "15px", fontWeight: 700 }}>REQUEST FOR<br /> PROPOSAL</h1>
+                            <h1 >REQUEST FOR<br /> PROPOSAL</h1>
                             <Form layout="vertical" style={{ marginTop: "20px" }}>
                                 <Form.Item >
                                     <Input style={{ borderRadius: "15px" }} placeholder="Enter Full Name" />
@@ -38,11 +39,16 @@ const LandingForm = () => {
                                     </Col>
                                 </Row>
                                 <Form.Item >
-                                    <Input style={{ height: "50px", borderRadius: "15px" }} placeholder="Enter Description" />
+                                    <TextArea rows={4} placeholder="Enter Description" />
                                 </Form.Item>
                                 <Form.Item>
                                     <Button style={{
-                                        backgroundColor: '#30939e', borderColor: '#30939e', color: "#fff", padding: '0px 40px', borderRadius: "15px"
+                                        backgroundColor: '#30939e', borderColor: '#30939e', color: "#fff", padding: '0px 40px', borderRadius: "15px",
+                                        width: "200px",
+                                        height: "40px",
+                                        borderRadius: "27px",
+                                        backgroundImage: " linear-gradient(0deg, #234b54 0%, #369694 100%)",
+                                        fontSize: "17px"
                                     }}>Submit</Button>
                                 </Form.Item>
                             </Form>

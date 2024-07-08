@@ -5,3 +5,47 @@
     color: #fff;
     height: 240px;
 }
+
+.client-section h1 {
+    font-size: 50px;
+    letter-spacing: 12px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
+    text-align: center;
+}
+
+.client-leftarrow {
+    z-index: 12;
+    position: absolute;
+    /* bottom: 18px; */
+    top: 27%;
+    bottom: 50%;
+    left: -17px;
+    color: #fff;
+    border-radius: 17px;
+    background-image: linear-gradient(0deg, #21424c 0%, #369593 100%);
+
+}
+
+.client-rightarrow {
+    left: 928px;
+    /* right: 0px; */
+    top: -85px;
+    color: #fff;
+    border-radius: 16px;
+    background-image: linear-gradient(180deg, #d0040f 0%, #f5b404 100%);
+
+}
+
+.client-underline {
+    text-align: center;
+    width: 204px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 6px;
+    border-radius: 3px;
+    background-image: linear-gradient(0deg, #b63125 0%, #e75123 100%);
+}

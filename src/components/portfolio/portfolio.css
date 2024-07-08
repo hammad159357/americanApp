@@ -8,3 +8,37 @@
     padding: 0 50px;
     text-align: center;
 }
+
+.portfolio-container {
+    padding: 0px 170px;
+}
+
+.portfolio-container h1 {
+    font-size: 50px;
+    letter-spacing: 12px;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Poppins";
+    margin-bottom: 15px;
+}
+
+.portfolio-container .ant-tabs-centered>.ant-tabs-nav .ant-tabs-nav-wrap:not([class*='.ant-tabs-nav-wrap-ping']) {
+    border-bottom: 1px solid #fff;
+}
+
+.portfolio-container .ant-tabs .ant-tabs-tab {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 600;
+    text-align: center;
+}
+
+.portfolio-container .ant-tabs>.ant-tabs-nav .ant-tabs-nav-list {
+    justify-content: space-around;
+    flex: 1;
+}
+
+.portfolio-container .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #000000;
+}

@@ -28,13 +28,13 @@ const Workflow = () => {
                 >WORKFLOW</motion.h1>
                 <Row gutter={[16, 20]} justify='center' style={{ gap: "20px", padding: '0px 250px' }}>
                     {data.map(el =>
-                        <Col style={{ maxWidth: "112px" }}>
+                        <Col style={{ maxWidth: "138px" }}>
                             <motion.div
                                 viewport={{ once: true }}
                                 initial={{ opacity: 0, x: 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ type: "spring", stiffness: 100, damping: 30 }}
-                                style={{ background: "black", padding: "8px", borderRadius: "4px" }}>
+                                style={{ background: "#000000", padding: "20px", borderRadius: "4px" }}>
                                 <img height='80px' src={el?.img} alt='portfolio1' />
                             </motion.div>
                             <motion.p
@@ -42,7 +42,6 @@ const Workflow = () => {
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ type: "spring", stiffness: 100, damping: 30 }}
-                                style={{ fontWeight: 700 }}
                             >{el?.title}</motion.p>
                         </Col>
                     )}

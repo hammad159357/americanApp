@@ -3,3 +3,21 @@
     text-align: left;
     color: black;
 }
+
+.about h1 {
+    font-size: 50px;
+    letter-spacing: 12px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Poppins";
+    text-align: center;
+}
+
+.about p {
+    font-size: 17px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Poppins";
+}

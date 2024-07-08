@@ -22,13 +22,26 @@
 } */
 
 /* banner.css */
-.banner {
+/* .banner {
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} */
+.banner {
+    background: url('./../../assets//Header-Hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
 }
 
 .banner img {
@@ -37,6 +50,35 @@
 }
 
 .marquee {
+    /* display: flex;
+    white-space: nowrap; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    white-space: nowrap;
+    /* gap: 15px; */
+    /* overflow: hidden; */
+}
+
+.text h1 {
+    /* color: #fff;
+    font-size: 10vw;
+    font-weight: 600;
+    padding-right: 10px; */
+    font-size: 100px;
+    letter-spacing: 20px;
+    /* line-height: 26px; */
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
+}
+
+/* .marquee {
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
@@ -46,7 +88,6 @@
     display: inline-block;
     padding-left: 100%;
     color: #fff;
-    /* Ensures content starts outside the visible area */
     animation: marquee 20s linear infinite;
 }
 
@@ -58,4 +99,4 @@
     100% {
         transform: translateX(-100%);
     }
-}
+} */

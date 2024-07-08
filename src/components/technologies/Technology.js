@@ -41,7 +41,7 @@ const Technology = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 30 }}
                     style={{ marginTop: "20px" }}>
-                    <Carousel autoplay
+                    <Carousel
                         style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
                         afterChange={onChange}
                     >

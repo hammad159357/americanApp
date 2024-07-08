@@ -15,8 +15,8 @@ import Banner from './components/banner/Banner';
 function App() {
   return (
     <>
-      <Header />
-      <Banner />
+      {/* <Header />
+      <Banner /> */}
       <About />
       <Service />
       <Technology />

@@ -12,7 +12,7 @@ const Industry = () => {
                     initial={{ opacity: 0, y: -100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 30 }}
-                    style={{ marginLeft: "270px", marginBottom: "20px", width: "50%" }}>
+                >
                     <h1> Our Industry </h1>
                     <h1> Expertise </h1>
                 </motion.div>

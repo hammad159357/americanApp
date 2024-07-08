@@ -15,6 +15,16 @@
     margin-bottom: 10px;
 }
 
+.left-column h1 {
+    font-size: 50px;
+    letter-spacing: 12px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
+}
+
 .left-column p {
     margin-bottom: 20px;
 }

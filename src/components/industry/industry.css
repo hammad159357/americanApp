@@ -5,6 +5,36 @@
     color: #fff;
 }
 
+.industry-section h1 {
+    font-size: 50px;
+    letter-spacing: 12px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
+    margin-left: 182px;
+    margin-bottom: 20px;
+    width: 50%
+}
+
+.industry-section h3 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
+}
+
+.industry-section p {
+    font-size: 17px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
 .industry-content {
     text-align: left;
     position: relative;
@@ -24,8 +54,15 @@
 
 .industry-content ul li {
     /* color: #2E3E5C; */
-    font-size: 16px;
-    font-family: Montserrat;
+    /* font-size: 16px;
+    font-family: Montserrat; */
+    font-size: 30px;
+    letter-spacing: 8px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins";
 }
 
 .industry-content h1 {

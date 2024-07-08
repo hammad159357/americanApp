@@ -1,8 +1,10 @@
-import React from 'react'
-import { Card, Carousel } from 'antd'
+import React, { useRef } from 'react'
+import { Card, Carousel, Button } from 'antd'
 import { motion } from 'framer-motion'
 import './testimonial.css'
-
+import { ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons';
+import LeftArrowIcon from '../../assets/icons/LeftArrow'
+import RightArrowIcon from '../../assets/icons/RightArrow'
 const Testimonial = () => {
     const contentStyle = {
         // margin: 0,
@@ -18,10 +20,11 @@ const Testimonial = () => {
     const onChange = (currentSlide) => {
         console.log(currentSlide);
     };
+    const slider = useRef(null)
     return (
         <>
             <div className='testimonial-section'>
-                <motion.div initial={{ opacity: 0, y: -100 }}
+                <motion.div style={{ marginBottom: "25px" }} initial={{ opacity: 0, y: -100 }}
                     viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 30 }}>
@@ -37,11 +40,29 @@ const Testimonial = () => {
                 </Card> */}
                 {/* <Carousel style={{ width: "70%", marginLeft: "auto", marginRight: "auto" }} afterChange={onChange}> */}
                 <motion.div initial={{ opacity: 0, y: 100 }}
+
                     viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 30 }}>
-                    <Carousel autoplay
-                        style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
+                    {/* <Button onClick={() => slider.current.next()}>next</Button> */}
+                    <Carousel ref={slider} arrows
+                        dots={false}
+                        autoplay
+                        autoplaySpeed={5000}
+                        nextArrow={<>
+                            <Button shape="circle"
+                                icon={<RightArrowIcon />}
+                                className='rightarrow'
+                                onClick={() => slider.current.next()} /></>}
+
+                        prevArrow={<>
+                            <Button shape="circle"
+                                icon={<LeftArrowIcon />}
+                                className='leftarrow'
+
+                                onClick={() => slider.current.prev()} /></>}
+
+                        style={{ position: "relative", width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
                         afterChange={onChange}
                     >
                         <div>
