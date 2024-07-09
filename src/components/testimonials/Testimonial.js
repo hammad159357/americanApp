@@ -52,6 +52,11 @@ const Testimonial = () => {
                                     /* here is your component tokens */
                                     arrowOffset: 50
                                 },
+                                Button: {
+                                    lineWidth: 0,
+                                    defaultHoverBg: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)",
+                                    defaultHoverColor: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)"
+                                },
                             },
                         }}
                     >

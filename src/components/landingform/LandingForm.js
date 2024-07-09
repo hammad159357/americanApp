@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Form, Input, Button, Select } from 'antd';
+import { Row, Col, Form, Input, Button, Select, ConfigProvider } from 'antd';
 import mobileImage from '../../assets/mobilecomplete.png'
 // import FormGroup from '../../assets/Group.png'
 import { motion } from 'framer-motion'
@@ -42,14 +42,27 @@ const LandingForm = () => {
                                     <TextArea rows={4} placeholder="Enter Description" />
                                 </Form.Item>
                                 <Form.Item>
-                                    <Button style={{
-                                        backgroundColor: '#30939e', borderColor: '#30939e', color: "#fff", padding: '0px 40px', borderRadius: "15px",
-                                        width: "200px",
-                                        height: "40px",
-                                        borderRadius: "27px",
-                                        backgroundImage: " linear-gradient(0deg, #234b54 0%, #369694 100%)",
-                                        fontSize: "17px"
-                                    }}>Submit</Button>
+                                    <ConfigProvider
+                                        theme={{
+                                            components: {
+                                                Button: {
+                                                    defaultHoverBg: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)",
+                                                    defaultHoverColor: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)"
+                                                },
+                                            },
+                                        }}
+                                    >
+                                        <Button className='landing-btn' style={{
+                                            // backgroundColor: '#30939e', 
+                                            borderColor: '#30939e', color: "#fff", padding: '0px 40px', borderRadius: "15px",
+                                            width: "200px",
+                                            height: "40px",
+                                            borderRadius: "27px",
+                                            // backgroundImage: " linear-gradient(0deg, #234b54 0%, #369694 100%)",
+                                            fontSize: "17px"
+                                        }}>Submit</Button>
+                                    </ConfigProvider>
+
                                 </Form.Item>
                             </Form>
                         </motion.div>

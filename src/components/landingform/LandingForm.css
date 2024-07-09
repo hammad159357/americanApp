@@ -43,6 +43,11 @@
     border-radius: 15px;
 }
 
+.landing-btn {
+    background-image: linear-gradient(0deg, #234b54 0%, #369694 100%);
+    background-color: #30939e;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .two-column-section {

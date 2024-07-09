@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Card, Carousel, Row, Col, Button } from 'antd'
+import { Card, Carousel, Row, Col, Button, ConfigProvider } from 'antd'
 // import logo from '../../assets/Header-logo.png's
 import ServiceImg from '../../assets/Service-Image.jpg'
 import ServiceText from '../../assets/Service-text-img.jpg'
@@ -13,7 +13,7 @@ import './service.css'
 
 const Service = () => {
     const slider = useRef(null)
-    const [activeKey, setActiveKey] = useState('ANDROID')
+    const [activeKey, setActiveKey] = useState('')
     const contentStyle = {
         // height: '130px',
         flex: 1,
@@ -129,7 +129,7 @@ const Service = () => {
                                 // viewport={{ once: true }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ type: "spring", stiffness: 100, damping: 30 }}>
-                                <img height='250px' width='250px' style={{ borderRadius: "12px" }} src={content[activeKey]?.image} />
+                                <img height='250px' width='250px' style={{ borderRadius: "12px" }} src={content[activeKey]?.image || content['ANDROID']?.image} />
                             </motion.div>
                         </Col>
                         <Col sm={24} md={8} style={{ textAlign: "left" }}>
@@ -138,7 +138,7 @@ const Service = () => {
                                 // viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 100, damping: 30 }}>
                                 {/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. */}
-                                {content[activeKey]?.content}
+                                {content[activeKey]?.content || content['ANDROID']?.content}
                             </motion.p>
                         </Col>
                     </Row>
@@ -148,8 +148,18 @@ const Service = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring", stiffness: 100, damping: 30 }}
                     >
-
-                        <Button className='service-button'>View More</Button>
+                        <ConfigProvider
+                            theme={{
+                                components: {
+                                    Button: {
+                                        defaultHoverBg: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)",
+                                        defaultHoverColor: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)"
+                                    },
+                                },
+                            }}
+                        >
+                            <Button className='service-button'>View More</Button>
+                        </ConfigProvider>
                     </motion.div>
                 </div>
             </div>

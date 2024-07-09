@@ -28,6 +28,11 @@
     font-family: "Poppins";
 }
 
+.list-btn {
+    background-image: linear-gradient(0deg, #234b54 0%, #369694 100%);
+    background-color: #30939e;
+}
+
 .header-list ul li:hover {
     color: #ec2924;
     font-weight: 700;

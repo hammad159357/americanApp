@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Card, Carousel, Button } from 'antd'
+import { Card, Carousel, Button, ConfigProvider } from 'antd'
 import svg1 from '../../assets/svg1.svg'
 import svg2 from '../../assets/svg2.svg'
 import svg3 from '../../assets/svg3.svg'
@@ -52,53 +52,67 @@ const ClientReview = () => {
                 transition={{ type: "spring", stiffness: 100, damping: 30 }}
                 viewport={{ once: true }}
                 style={{ marginTop: "-60px" }}>
-                <Carousel arrows dots={false} ref={slider}
-                    nextArrow={<>
-                        <Button shape="circle"
-                            icon={<RightArrowIcon />}
-                            className='client-rightarrow'
-                            onClick={() => slider.current.next()} /></>}
-
-                    prevArrow={<>
-                        <Button shape="circle"
-                            icon={<LeftArrowIcon />}
-                            className='client-leftarrow'
-
-                            onClick={() => slider.current.prev()} /></>}
-                    style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
-                    afterChange={onChange}
+                <ConfigProvider
+                    theme={{
+                        components: {
+                            Button: {
+                                lineWidth: 0,
+                                defaultHoverBg: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)",
+                                defaultHoverColor: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)"
+                            },
+                        },
+                    }}
                 >
-                    <div>
-                        <div style={{ display: "flex", background: 'linear-gradient(0deg, #b93126 0%, #e3582c 100%)', borderRadius: "8px" }}>
-                            {data?.map((el, i) => {
-                                return (
-                                    <>
-                                        <div key={i} style={contentStyle}>
-                                            <div style={logoStyle}>
-                                                <img width='70px' height='70px' src={el} />
+                    <Carousel arrows dots={false} ref={slider}
+                        nextArrow={<>
+                            <Button shape="circle"
+                                icon={<RightArrowIcon />}
+                                className='client-rightarrow'
+                                onClick={() => slider.current.next()} /></>}
+
+                        prevArrow={<>
+                            <Button shape="circle"
+                                icon={<LeftArrowIcon />}
+                                className='client-leftarrow'
+
+                                onClick={() => slider.current.prev()} /></>}
+                        style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
+                        afterChange={onChange}
+                    >
+
+                        <div>
+                            <div style={{ display: "flex", background: 'linear-gradient(0deg, #b93126 0%, #e3582c 100%)', borderRadius: "8px" }}>
+                                {data?.map((el, i) => {
+                                    return (
+                                        <>
+                                            <div key={i} style={contentStyle}>
+                                                <div style={logoStyle}>
+                                                    <img width='70px' height='70px' src={el} />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </>
-                                )
-                            })}
+                                        </>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div style={{ display: "flex", background: 'rgb(194 65 26)', borderRadius: "8px" }}>
-                            {data?.map((el, i) => {
-                                return (
-                                    <>
-                                        <div key={i} style={contentStyle}>
-                                            <div style={logoStyle}>
-                                                <img width='70px' height='70px' src={el} />
+                        <div>
+                            <div style={{ display: "flex", background: 'rgb(194 65 26)', borderRadius: "8px" }}>
+                                {data?.map((el, i) => {
+                                    return (
+                                        <>
+                                            <div key={i} style={contentStyle}>
+                                                <div style={logoStyle}>
+                                                    <img width='70px' height='70px' src={el} />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </>
-                                )
-                            })}
+                                        </>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                </Carousel>
+                    </Carousel>
+                </ConfigProvider>
+
             </motion.div>
         </>
     )
