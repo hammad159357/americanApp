@@ -89,7 +89,7 @@ const Service = () => {
                                 onClick={() => slider.current.prev()} /></>}
                     >
                         <div>
-                            <div style={{ display: "flex", borderRadius: "8px", padding: "0px 325px" }}>
+                            <div style={{ display: "flex", borderRadius: "8px", padding: "0px 310px" }}>
                                 {data?.map((el) => {
                                     return (
                                         <>
