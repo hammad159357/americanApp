@@ -26,7 +26,8 @@ const Workflow = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 30 }}
                 >WORKFLOW</motion.h1>
-                <Row gutter={[16, 20]} justify='center' style={{ gap: "20px", padding: '0px 250px' }}>
+                {/* <Row gutter={[16, 20]} justify='center' style={{ gap: "20px", padding: '0px 250px' }}> */}
+                <Row gutter={[16, 20]} justify='center' style={{ gap: "20px" }}>
                     {data.map(el =>
                         <Col style={{ maxWidth: "138px" }}>
                             <motion.div
