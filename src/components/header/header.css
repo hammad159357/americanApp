@@ -12,9 +12,27 @@
 
 .header-list ul {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     list-style-type: none;
     /* justify-content: space-around; */
     align-items: center;
     margin: unset;
+}
+
+.header-list ul li {
+    font-size: 18px;
+    line-height: 26px;
+    /* text-decoration: underline;
+    color: #ec2924; */
+    font-weight: 700;
+    font-family: "Poppins";
+}
+
+.header-list ul li:hover {
+    color: #ec2924;
+    font-weight: 700;
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: .3s;
+    text-decoration: underline;
 }

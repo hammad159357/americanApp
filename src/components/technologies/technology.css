@@ -17,3 +17,19 @@
     font-family: "Poppins";
     text-align: center;
 }
+
+
+.slick-dots li {
+    margin: 0px -3px !important
+        /* Adjust the margin between dots (change 5px to your desired value) */
+}
+
+.technology-section .slick-dots li button:before {
+    font-size: 9px;
+}
+
+.technology-section .slick-dots li.slick-active button:before {
+    color: #d0040f;
+
+    /* Change this to the desired active color */
+}

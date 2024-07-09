@@ -2,6 +2,8 @@ import { Button } from 'antd'
 import React from 'react'
 import HeaderLogo from '../../assets/Header-logo.png'
 import { motion } from 'framer-motion'
+import { PhoneOutlined } from '@ant-design/icons';
+import phone from '../../assets/phone.svg'
 import './header.css'
 
 const Header = () => {
@@ -26,7 +28,21 @@ const Header = () => {
                         <li>Services</li>
                         <li>Our Works</li>
                         <li>Contact Us</li>
-                        <li><Button style={{ background: "#30939e", color: "#fff", borderRadius: "20px", borderColor: "#30939e" }}>123 456 78</Button></li>
+                        <li>
+                            {/* <Button style={{ background: "#30939e", color: "#fff", borderRadius: "20px", borderColor: "#30939e" }}>123 456 7890</Button> */}
+                            <Button style={{
+                                backgroundColor: '#30939e', borderColor: '#30939e', color: "#fff", padding: '0px 20px', borderRadius: "15px",
+                                // width: "200px",
+                                height: "38px",
+                                borderRadius: "27px",
+                                backgroundImage: " linear-gradient(0deg, #234b54 0%, #369694 100%)",
+                                fontSize: "18px",
+                                lineHeight: "29px",
+                                fontWeight: 400,
+                            }}
+                                icon={<img src={phone} />}
+                            >123 456 7890</Button>
+                        </li>
                     </ul>
                 </motion.div>
             </div>

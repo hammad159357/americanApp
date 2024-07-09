@@ -27,7 +27,7 @@ const Service = () => {
         padding: "20px 40px",
         color: "black",
         borderRadius: "50px",
-        border: "1px solid red",
+        border: "2px solid red",
         color: "#black",
         fontWeight: 500,
         cursor: 'pointer',
