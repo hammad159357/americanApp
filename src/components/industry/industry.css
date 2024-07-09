@@ -85,6 +85,14 @@
     height: auto;
 }
 
+.industry-content ul li:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: .3s;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .industry-content h1 {
@@ -97,5 +105,13 @@
 
     .industry-section {
         padding: 30px;
+    }
+}
+
+@media (max-width: 2560px) {
+    .industry-section {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

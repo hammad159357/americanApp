@@ -33,3 +33,11 @@
 
     /* Change this to the desired active color */
 }
+
+@media (max-width: 2560px) {
+    .technology-section {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

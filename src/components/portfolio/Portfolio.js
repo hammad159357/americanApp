@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Tabs, Col } from 'antd'
+import { Row, Tabs, Col, ConfigProvider } from 'antd'
 import portfolio1 from '../../assets/portfolio1.jpg'
 import portfolio2 from '../../assets/portfolio2.jpg'
 import portfolio3 from '../../assets/portfolio3.jpg'
@@ -49,6 +49,7 @@ const Portfolio = () => {
 
     return (
         <>
+
             <div className='portfolio-section'>
                 <div className='portfolio-container'>
                     <motion.h1
@@ -63,7 +64,23 @@ const Portfolio = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ type: "spring", stiffness: 100, damping: 30 }}
                     >
-                        <Tabs de tabBarGutter={48} centered defaultActiveKey="FASIONAPP" items={items} onChange={onChange} />
+                        <ConfigProvider
+                            theme={{
+                                components: {
+                                    Tabs: {
+                                        /* here is your component tokens */
+                                        titleFontSize: 20,
+                                        // ',
+                                        inkBarColor: "#ea4b29",
+                                        itemColor: "black",
+                                        itemSelectedColor: "black",
+                                        itemHoverColor: "black"
+                                    },
+                                },
+                            }}
+                        >
+                            <Tabs indicator={{ size: (number) => number + 70, align: "center" }} tabBarGutter={48} centered defaultActiveKey="FASIONAPP" items={items} onChange={onChange} />
+                        </ConfigProvider>
                     </motion.div>
                 </div>
             </div>

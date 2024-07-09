@@ -27,7 +27,7 @@ const Industry = () => {
                             <Row gutter={[16, 2]} >
                                 <Col >
                                     <ul >
-                                        <li style={{ textDecoration: "underline", textUnderlineOffset: "4px" }}>HEALTHCARE</li>
+                                        <li >HEALTHCARE</li>
                                         <li>FINTECH</li>
                                         <li>RETAIL</li>
                                         <li>REAL ESTATE</li>

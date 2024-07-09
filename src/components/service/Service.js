@@ -89,12 +89,12 @@ const Service = () => {
                                 onClick={() => slider.current.prev()} /></>}
                     >
                         <div>
-                            <div style={{ display: "flex", borderRadius: "8px", padding: "0px 310px" }}>
+                            <div className='service-slider' style={{ display: "flex", borderRadius: "8px" }}>
                                 {data?.map((el) => {
                                     return (
                                         <>
                                             <div key={el?.key} style={contentStyle}>
-                                                <div onClick={() => setActiveKey(el?.key)} style={{ ...logoStyle, backgroundImage: activeKey === el?.key && 'linear-gradient(0deg, #ff2921 0%, #e3582c 100%)' }}>
+                                                <div className='silder-hover' onClick={() => setActiveKey(el?.key)} style={{ ...logoStyle, backgroundImage: activeKey === el?.key && 'linear-gradient(0deg, #ff2921 0%, #e3582c 100%)' }}>
                                                     {el?.title1}<br />{el?.title2}
                                                 </div>
                                             </div>
@@ -104,12 +104,12 @@ const Service = () => {
                             </div>
                         </div>
                         <div>
-                            <div style={{ display: "flex", borderRadius: "8px", padding: "0px 325px" }}>
+                            <div className='service-slider' style={{ display: "flex", borderRadius: "8px" }}>
                                 {data2?.map((el) => {
                                     return (
                                         <>
                                             <div key={el?.key} style={contentStyle}>
-                                                <div onClick={() => setActiveKey(el?.key)} style={{ ...logoStyle, backgroundImage: activeKey === el?.key && 'linear-gradient(0deg, #ff2921 0%, #e3582c 100%)' }}>
+                                                <div className='silder-hover' onClick={() => setActiveKey(el?.key)} style={{ ...logoStyle, backgroundImage: activeKey === el?.key && 'linear-gradient(0deg, #ff2921 0%, #e3582c 100%)' }}>
                                                     {el?.title1}<br />{el?.title2}
                                                 </div>
                                             </div>

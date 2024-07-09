@@ -42,3 +42,11 @@
 .portfolio-container .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: #000000;
 }
+
+@media (max-width: 2560px) {
+    .portfolio-section {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
