@@ -63,7 +63,7 @@ const ClientReview = () => {
                         },
                     }}
                 >
-                    <Carousel arrows dots={false} ref={slider}
+                    <Carousel draggable={true} arrows dots={false} ref={slider}
                         nextArrow={<>
                             <Button shape="circle"
                                 icon={<RightArrowIcon />}

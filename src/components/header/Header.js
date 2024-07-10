@@ -21,7 +21,12 @@ const Header = () => {
                         components: {
                             Button: {
                                 defaultHoverBg: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)",
-                                defaultHoverColor: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)"
+                                defaultHoverColor: "linear-gradient(180deg, #d0040f 0%, #f5b404 100%)",
+                                defaultActiveBorderColor: 'linear-gradient(180deg, #d0040f 0%, #f5b404 100%)',
+                                defaultBorderColor: 'linear-gradient(180deg, #d0040f 0%, #f5b404 100%)',
+                                defaultHoverBorderColor: 'linear-gradient(180deg, #d0040f 0%, #f5b404 100%)',
+                                defaultGhostBorderColor: 'linear-gradient(180deg, #d0040f 0%, #f5b404 100%)',
+                                defaultActiveBg: 'linear-gradient(180deg, #d0040f 0%, #f5b404 100%)',
                             },
                         },
                     }}
@@ -43,7 +48,8 @@ const Header = () => {
                                 {/* <Button style={{ background: "#30939e", color: "#fff", borderRadius: "20px", borderColor: "#30939e" }}>123 456 7890</Button> */}
                                 <Button className='list-btn' style={{
                                     // backgroundColor: '#30939e',
-                                    borderColor: '#30939e', color: "#fff", padding: '0px 20px', borderRadius: "15px",
+                                    // borderColor: '#30939e',
+                                    color: "#fff", padding: '0px 20px', borderRadius: "15px",
                                     // width: "200px",
                                     height: "38px",
                                     borderRadius: "27px",
